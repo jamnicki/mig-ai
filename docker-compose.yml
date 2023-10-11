@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  mig-ai:
+    build: .
+    volumes:
+      # mount for development purposes
+      - ./:/app
+      # custom volumes
+      - ~/.cache:/root/.cache
+      - ~/.python_history:/root/.python_history
+    container_name: mig-ai
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
