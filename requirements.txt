@@ -1,7 +1,7 @@
-dvc[gdrive]
+dvc[gdrive] == 2.58.2
 python-dotenv
 
-pandas
+pandas[all]
 
 notebook
 nbconvert
