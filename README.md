@@ -8,11 +8,21 @@
 
 ## Development
 
-```bash
+```
 docker compose up -d
 ```
 
 ### Data
 On the first usage of a GDrive remote, for example when trying to dvc push tracked data for the first time, DVC will prompt you to visit a special Google authentication web page. There you'll need to sign into a Google account with the needed access to the GDrive URL in question.
+
+Pull the latest data from the remote storage by running:
+```
+dvc pull
+```
+or
+```
+dvc pull <file1>.dvc <file2>.dvc
+```
+to pull specific files.
 
 ## Cite
