@@ -1,0 +1,12 @@
+dvc[gdrive]
+python-dotenv
+
+pandas
+
+notebook
+nbconvert
+jupyter
+ipykernel
+ipywidgets
+tqdm
+loguru
