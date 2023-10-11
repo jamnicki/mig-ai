@@ -1,4 +1,5 @@
 [core]
+    remote = storage
     autostage = true
-['remote "data-migai-gdrive-remote"']
+['remote "storage"']
     url = gdrive://1k9KPpiYDTXGYKAzaVtBMGhBci9C7y_5y
