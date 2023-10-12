@@ -13,7 +13,19 @@ docker compose up -d
 ```
 
 ### Data
-On the first usage of a GDrive remote, for example when trying to dvc push tracked data for the first time, DVC will prompt you to visit a special Google authentication web page. There you'll need to sign into a Google account with the needed access to the GDrive URL in question.
+
+```
+dvc remote modify --local myremote url 'azure://datacontainer'
+```
+
+```
+dvc remote modify --local myremote account_name 'migaiaccname'
+```
+
+```
+dvc remote modify --local myremote sas_token '<your-sas-token>'
+```
+
 
 Pull the latest data from the remote storage by running:
 ```

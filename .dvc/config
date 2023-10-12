@@ -1,5 +1,4 @@
 [core]
-    remote = storage
-    autostage = true
-['remote "storage"']
-    url = gdrive://1k9KPpiYDTXGYKAzaVtBMGhBci9C7y_5y
+    remote = myremote
+['remote "myremote"']
+    url = https://migaiaccname.blob.core.windows.net/datacontainer
