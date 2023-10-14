@@ -1,4 +1,5 @@
 [core]
     remote = myremote
+    autostage = true
 ['remote "myremote"']
     url = https://migaiaccname.blob.core.windows.net/datacontainer
