@@ -2,10 +2,11 @@ FROM pytorch/pytorch:1.13.1-cuda11.6-cudnn8-runtime
 
 WORKDIR /tmp
 
-RUN apt-get update
+RUN apt-get -y update
 
 RUN apt-get install --no-install-recommends -y bash \
     build-essential \
+    zip \
     git \
     curl \
     wget \
