@@ -1,0 +1,19 @@
+Nazwa filmu jest w formacie:
+K - przedrostek informujący, że film pochodzi z korpusu PJM,
+00 - dwucyfrowy numer to numer sesji, z której pochodzi nagranie,
+A/B - określenie informatora z pary,
+F - określenie kadru (F - 'front'),
+00-00 - numery zadań, które były nagrywane w danej sesji (np. 12-26, w
+tej części sesji nagrywano zadania od 12 do 26)
+_00 - dwucyfrowy numer ID
+
+
+2. Wszystkie pliki eaf znajdują się w załączniku.
+Są one podzielone na katalogi zgodnie z numerami zadań:
+
+a) Kalendarz 7
+b) Sylwester/Żaba 8
+c) Komiksy 13
+d) Znaki zakazu 15
+e) Gruszki/Chaplin 17
+f) Alarm 24

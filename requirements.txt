@@ -10,3 +10,5 @@ ipykernel
 ipywidgets
 tqdm
 loguru
+matplotlib
+seaborn
