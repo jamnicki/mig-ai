@@ -1,0 +1,5 @@
+outs:
+- md5: 94cdd56f342511f2c51fda0c42536521
+  size: 32787632
+  hash: md5
+  path: glosa_annotations.jsonl
