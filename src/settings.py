@@ -16,8 +16,10 @@ ORKPJM_ANN_DIR = ORKPJM_DIR / "eafy_CZERWIEC2021"
 
 PREPROCESSED_DIR = DATA_DIR / "preprocessed"
 PREPRO_ANNOTATIONS_DIR = PREPROCESSED_DIR / "annotations"
-GLOSA_ANNOTATIONS_FPATH = PREPRO_ANNOTATIONS_DIR / "glosa_annotations.jsonl"
+GLOSS_ANNOTATIONS_FPATH = PREPRO_ANNOTATIONS_DIR / "glosa_annotations.jsonl"
 POLISH_ANNOTATIONS_FPATH = PREPRO_ANNOTATIONS_DIR / "polish_annotations.jsonl"
+
+GLOSS2POLISH_FILEPATH = PREPROCESSED_DIR / "gloss2polish.jsonl"
 
 TASK_LABELS = ["07", "08", "13", "15", "17", "24"]
 TASK_LABEL_NAME_MAP = {
@@ -28,3 +30,11 @@ TASK_LABEL_NAME_MAP = {
     "17": "Gruszki / Chaplin",
     "24": "Alarm",
 }
+
+GLOSS_SPECIAL_SYMBOLS = ["###", "^", "%", "&", "@"]
+GLOSS_ADDITIONAL_ABBR = [
+    "IDENTYF:",
+    "$:KL:",
+    "WSKAZ:",
+    "G:",
+]

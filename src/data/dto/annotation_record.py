@@ -1,5 +1,3 @@
-from typing import Optional
-
 from pydantic import BaseModel
 
 
@@ -12,7 +10,7 @@ class AnnotationRecord(BaseModel):
     task_label: str
 
 
-class GlosaAnnotationRecord(AnnotationRecord):
+class GlossAnnotationRecord(AnnotationRecord):
     dominant_hand: bool = True
 
 

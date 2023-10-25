@@ -1,0 +1,5 @@
+outs:
+- md5: 52eb0fec4702a7a2f94cd41750bf6155
+  size: 59026117
+  hash: md5
+  path: gloss2polish.jsonl

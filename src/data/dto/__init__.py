@@ -1,7 +1,13 @@
 from .annotation_record import (
     AnnotationRecord,
-    GlosaAnnotationRecord,
+    GlossAnnotationRecord,
     PolishAnnotationRecord,
 )
+from .gloss2polish_record import GlossSeq2PolishRecord
 
-__all__ = ["AnnotationRecord", "GlosaAnnotationRecord", "PolishAnnotationRecord"]
+__all__ = [
+    "AnnotationRecord",
+    "GlossAnnotationRecord",
+    "PolishAnnotationRecord",
+    "GlossSeq2PolishRecord",
+]
