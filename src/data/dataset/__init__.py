@@ -1,3 +1,3 @@
-from .glosa2polish import Glosa2PolishDataset
+from .gloss2polish import GlossSeq2PolishDataset
 
-__all__ = ["Glosa2PolishDataset"]
+__all__ = ["GlossSeq2PolishDataset"]
