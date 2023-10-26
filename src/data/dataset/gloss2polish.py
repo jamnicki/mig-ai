@@ -11,8 +11,8 @@ from src.data.dto import (
     PolishAnnotationRecord,
 )
 from src.settings import (
-    GLOSS2POLISH_FILEPATH,
     GLOSS_ANNOTATIONS_FPATH,
+    GLOSSSEQ2POLISH_FILEPATH,
     POLISH_ANNOTATIONS_FPATH,
 )
 
@@ -23,7 +23,7 @@ class GlossSeq2PolishDataset(Dataset):
 
     def __init__(
         self,
-        data_fpath: Path = GLOSS2POLISH_FILEPATH,
+        data_fpath: Path = GLOSSSEQ2POLISH_FILEPATH,
     ):
         self.data_fpath = data_fpath
         self.data_records = list(
@@ -37,7 +37,7 @@ class GlossSeq2PolishDataset(Dataset):
         return self.data_records[index]
 
 
-def collect_glosa_annotations(
+def collect_gloss_annotations(
     polish_annotation: PolishAnnotationRecord,
     gloss_annotations: List[GlossAnnotationRecord],
 ) -> List[GlossAnnotationRecord]:
@@ -45,11 +45,11 @@ def collect_glosa_annotations(
     return [
         gloss_annotation
         for gloss_annotation in gloss_annotations
-        if matching_glosa_annotation(gloss_annotation, polish_annotation)
+        if matching_gloss_annotation(gloss_annotation, polish_annotation)
     ]
 
 
-def matching_glosa_annotation(
+def matching_gloss_annotation(
     gloss_annotation: GlossAnnotationRecord,
     polish_annotation: PolishAnnotationRecord,
 ) -> bool:
@@ -63,9 +63,9 @@ def matching_glosa_annotation(
 
 
 def dump_paired_dataset(callback: Callable, force=False, **kwargs):
-    if GLOSS2POLISH_FILEPATH.exists() and not force:
+    if GLOSSSEQ2POLISH_FILEPATH.exists() and not force:
         logger.error(
-            f"{GLOSS2POLISH_FILEPATH} already exists!. To override, set force=True"
+            f"{GLOSSSEQ2POLISH_FILEPATH} already exists!. To override, set force=True"
         )
         return
     gloss_annotations = list(
@@ -80,9 +80,9 @@ def dump_paired_dataset(callback: Callable, force=False, **kwargs):
             jsonlines.open(POLISH_ANNOTATIONS_FPATH),
         )
     )
-    with jsonlines.open(GLOSS2POLISH_FILEPATH, mode="w") as writer:
+    with jsonlines.open(GLOSSSEQ2POLISH_FILEPATH, mode="w") as writer:
         for polish_annotation in callback(polish_annotations, **kwargs):
-            gloss_annotations_for_polish = collect_glosa_annotations(
+            gloss_annotations_for_polish = collect_gloss_annotations(
                 polish_annotation, gloss_annotations
             )
             if any(gloss_annotations_for_polish):
