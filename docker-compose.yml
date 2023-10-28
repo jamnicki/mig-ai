@@ -16,9 +16,13 @@ services:
         reservations:
           devices:
             - capabilities: [gpu]
-  
+
   wandb:
-    # image: wandb:latest
+    image: wandb/local
     container_name: wandb-server
-    # environment:
+    env_file:
+      - .env
+    environment:
+      - WANDB_MODE=offline
+      - WANDB_DIR=./.wandb/
     tty: true
