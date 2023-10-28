@@ -2,6 +2,7 @@ dvc[azure]
 python-dotenv
 
 pandas[all]
+wandb
 
 notebook
 nbconvert
