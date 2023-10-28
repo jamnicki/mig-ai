@@ -16,3 +16,9 @@ services:
         reservations:
           devices:
             - capabilities: [gpu]
+  
+  wandb:
+    # image: wandb:latest
+    container_name: wandb-server
+    # environment:
+    tty: true

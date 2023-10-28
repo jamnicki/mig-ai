@@ -3,7 +3,7 @@ from .annotation_record import (
     GlossAnnotationRecord,
     PolishAnnotationRecord,
 )
-from .gloss2polish_record import GlossSeq2PolishRecord
+from .glossseq2polish_record import GlossSeq2PolishRecord
 
 __all__ = [
     "AnnotationRecord",
