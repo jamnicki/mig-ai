@@ -10,7 +10,7 @@ class GlossSeq2PolishRecord(BaseModel):
     polish_annotation: PolishAnnotationRecord
 
     @staticmethod
-    def from_dict(dict_):
+    def from_dict(dict_: dict):
         return GlossSeq2PolishRecord(
             gloss_sequence=[
                 GlossAnnotationRecord(**gloss) for gloss in dict_["gloss_sequence"]

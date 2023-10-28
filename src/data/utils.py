@@ -1,10 +1,9 @@
+from src.settings import TASK_LABEL_NAME_MAP
 from typing import Any, Dict, Generator, Iterable
 
-# from src.settings import TASK_NUM_NAME_MAP
 
-
-# def get_task_name(task_num: str | int) -> str:
-#     return TASK_NUM_NAME_MAP[str(task_num)]
+def get_task_name(task_label: str) -> str:
+    return TASK_LABEL_NAME_MAP[task_label]
 
 
 def iter_dto_as_dicts(dto_iterable: Iterable) -> Generator[Dict[str, Any], None, None]:
