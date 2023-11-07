@@ -12,12 +12,14 @@ def merge_videos(videos_path):
         if file_path.is_file() and file_path.suffix == ".mp4":
             file_name = file_path.stem
             prefix = file_name.split("_")[0]
-
+            # Check if file is already merged
+            if (MERGED_MOVIES_DIR / (prefix + ".mp4")).is_file():
+                continue
             if prefix in files_dict:
                 files_dict[prefix].append(file_path)
             else:
                 files_dict[prefix] = [file_path]
-                
+
     # Połączenie plików o tym samym przedrostku
     for prefix, file_paths in files_dict.items():
         if len(file_paths) > 1:
