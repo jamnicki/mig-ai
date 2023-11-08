@@ -21,14 +21,20 @@ def merge_videos(videos_path):
                 files_dict[prefix] = [file_path]
 
     # Połączenie plików o tym samym przedrostku
-    for prefix, file_paths in files_dict.items():
-        if len(file_paths) > 1:
-            clips = [VideoFileClip(str(file)) for file in file_paths]
-            final_clip = concatenate_videoclips(clips)
-            final_clip.write_videofile(
-                str(MERGED_MOVIES_DIR / f"{prefix}.mp4"), codec="libx264", threads=4
-            )
 
+    for prefix, file_paths in files_dict.items():
+        # Ogarnięcie tymczasoew błędu z łaczeniem. Gdy problem wystąpi, niepoprawny film zostaje usunięty
+        try:
+            if len(file_paths) > 1:
+                clips = [VideoFileClip(str(file)) for file in file_paths]
+                final_clip = concatenate_videoclips(clips)
+                final_clip.write_videofile(
+                    str(MERGED_MOVIES_DIR / f"{prefix}.mp4"), codec="libx264", threads=4
+                )
+        except Exception as e:
+            print(f"Problem with file: {prefix}, exception: {e}")
+            faulty_file = Path(MERGED_MOVIES_DIR / f"{prefix}.mp4")
+            faulty_file.unlink()
     print("Operacja zakończona.")
 
 
