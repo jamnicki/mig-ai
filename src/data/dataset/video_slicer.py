@@ -17,6 +17,9 @@ def list_video_slicer(movies_path):
     movie_list = []
     for file_path in movies_path.iterdir():
         if file_path.is_file():
+            if (Path(MOVIE_CLIPS_DIR) / file_path.stem).exists():
+                print(file_path.stem)
+                continue
             movie_list.append(file_path.name)
 
     with jsonlines.open(GLOSS_ANNOTATIONS_FPATH, mode="r") as file:
