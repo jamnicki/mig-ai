@@ -14,3 +14,4 @@ tqdm
 loguru
 matplotlib
 seaborn
+moviepy
