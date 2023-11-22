@@ -1,4 +1,4 @@
-dvc[azure]
+dvc[gdrive]
 python-dotenv
 
 pandas[all]
