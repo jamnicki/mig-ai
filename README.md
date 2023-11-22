@@ -14,34 +14,11 @@ docker compose up -d
 
 ### Data
 
-```
-dvc remote modify --local myremote url 'azure://datacontainer'
-```
-
-```
-dvc remote modify --local myremote account_name 'migaiaccname'
-```
-
-```
-dvc remote modify --local myremote sas_token '<your-sas-token>'
-```
-
-
-Pull the latest data from the remote storage by running:
-```
-dvc pull
-```
-or
-```
-dvc pull <file1>.dvc <file2>.dvc
-```
-to pull specific files.
+Pull the latest data from the remote storage by running `dvc pull` or `dvc pull <file1>.dvc <file2>.dvc` to pull specific files.
 
 ## 🥇 Contributors
-<a  href="https://github.com/jamnicki/mig-ai/graphs/contributors">
-
-<img  src="https://contrib.rocks/image?repo=jamnicki/mig-ai" />
-
+<a href="https://github.com/jamnicki/mig-ai/graphs/contributors">
+   <img src="https://contrib.rocks/image?repo=jamnicki/mig-ai"/>
 </a>
 
 ## Cite
