@@ -1,1 +1,5 @@
 *.h5
+
+# gensim models
+*.model
+*.vectors_ngrams.npy
