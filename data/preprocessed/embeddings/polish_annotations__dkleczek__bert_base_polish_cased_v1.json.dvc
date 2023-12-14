@@ -1,0 +1,5 @@
+outs:
+- md5: 3cabd8f9f1f0a590d535c97b70d0c218
+  size: 647367563
+  hash: md5
+  path: polish_annotations__dkleczek__bert_base_polish_cased_v1.json
