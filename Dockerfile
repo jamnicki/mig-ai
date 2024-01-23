@@ -14,8 +14,8 @@ RUN apt-get install --no-install-recommends -y bash \
     gcc \
     libpq-dev \
     ffmpeg \
-    libsm6 \
-    libxext6
+    libxext6\
+    libsm6
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 

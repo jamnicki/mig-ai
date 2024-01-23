@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
 import pandas as pd
-from src.settings import MOVIE_CLIPS_DIR, DATA_DIR
+from src.settings import MOVIE_CLIPS_DIR, DATA_DIR, POLISH_ANNOTATIONS_SLICED
 import os
 import glob
 import os.path
@@ -14,7 +14,7 @@ def write_landmarks_to_csv(landmarks, frame_number, csv_data, video_name):
         csv_data.append([video_name, frame_number, mp_pose.PoseLandmark(idx).name, idx,landmark.x, landmark.y, landmark.z])
 
 
-def get_pose_landmarks(video_path, output_csv, output_dir):
+def get_pose_landmarks(video_path, output_csv, output_dir, video_file):
     cap = cv2.VideoCapture(video_path)
 
     frame_number = 0
@@ -57,22 +57,22 @@ mp_pose = mp.solutions.pose
 mp_drawing = mp.solutions.drawing_utils
 pose = mp_pose.Pose()
 
-video_dir = 'K01AF'
-video_file = 'K01AF__07_5160-5640.mp4'
-video_path = str(MOVIE_CLIPS_DIR / video_dir / video_file)
+# video_dir = 'K01AF'
+# video_file = 'K01AF__07_5160-5640.mp4'
+# video_path = str(MOVIE_CLIPS_DIR / video_dir / video_file)
 
 
-movies = os.listdir(MOVIE_CLIPS_DIR)
-videos = os.listdir(MOVIE_CLIPS_DIR/str(movies[0]))
-files = glob.glob(os.path.join(MOVIE_CLIPS_DIR/str(movies[0]), '*.mp4'))
+movies = os.listdir(POLISH_ANNOTATIONS_SLICED)
+videos = os.listdir(POLISH_ANNOTATIONS_SLICED/str(movies[0]))
+files = glob.glob(os.path.join(POLISH_ANNOTATIONS_SLICED/str(movies[0]), '*.mp4'))
 
-
-for movie in movies[2:3]:
-    video_clips = glob.glob(os.path.join(MOVIE_CLIPS_DIR/str(movie), '*.mp4'))
+for movie in movies[60:]:
+    video_clips = glob.glob(os.path.join(POLISH_ANNOTATIONS_SLICED/str(movie), '*.mp4'))
     print(movie)
     for clip in video_clips:
         print(clip)
         clip_match = re.search(r'([^/]+)\.mp4$', clip).group(1)
         output_dir = DATA_DIR / 'landmarks' / movie
         output_csv = DATA_DIR / 'landmarks' / movie / f"{clip_match}.csv"
-        get_pose_landmarks(clip, output_csv, output_dir)
+        get_pose_landmarks(clip, output_csv, output_dir, movie)
+
