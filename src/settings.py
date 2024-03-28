@@ -11,6 +11,7 @@ ROOT = get_project_root()
 DATA_DIR = ROOT / "data"
 MODELS_DIR = ROOT / "models"
 PLOTS_DIR = ROOT / "plots"
+LOGS_DIR = ROOT / "logs"
 
 ORKPJM_DIR = DATA_DIR / "ORKPJM"
 ORKPJM_VIDEOS_DIR = ORKPJM_DIR / "filmy_korpus"
@@ -35,6 +36,14 @@ TASK_LABEL_NAME_MAP = {
     "15": "Znaki zakazu",
     "17": "Gruszki / Chaplin",
     "24": "Alarm",
+}
+TASK_ID2NAME = {
+    0: "Kalendarz",
+    1: "Sylwester / Żaba",
+    2: "Komisky",
+    3: "Znaki zakazu",
+    4: "Gruszki / Chaplin",
+    5: "Alarm",
 }
 
 GLOSS_SPECIAL_SYMBOLS = ["###", "^", "%", "&", "@"]
