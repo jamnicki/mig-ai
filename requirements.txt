@@ -15,3 +15,5 @@ loguru
 matplotlib
 seaborn
 moviepy
+
+bertscore
