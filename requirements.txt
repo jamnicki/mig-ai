@@ -16,4 +16,5 @@ matplotlib
 seaborn
 moviepy
 
-bertscore
+bert-score
+evaluate
