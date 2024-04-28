@@ -16,5 +16,6 @@ matplotlib
 seaborn
 moviepy
 
+sacremoses
 bert-score
 evaluate
