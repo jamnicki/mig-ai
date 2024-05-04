@@ -20,3 +20,4 @@ sacremoses
 bert-score
 evaluate
 sacrebleu
+ray[tune]
