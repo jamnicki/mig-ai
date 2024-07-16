@@ -18,3 +18,9 @@ loguru
 matplotlib
 seaborn
 moviepy
+
+sacremoses
+bert-score
+evaluate
+sacrebleu
+ray[tune]

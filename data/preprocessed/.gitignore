@@ -6,3 +6,11 @@
 /movie_clips
 
 /autotrain_train.csv
+/landmarks_all/
+/clips_dataset_wth_herbert_token_ids.jsonl
+/to_augment_txts/
+/augmented_pl_annotations/
+
+*.zip
+*.jsonl
+*.txt

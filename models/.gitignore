@@ -1,4 +1,10 @@
 *.h5
+*.bin
+*.npy
+
+# pytorch save files
+*.pt
+*.pth
 
 # gensim models
 *.model
