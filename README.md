@@ -36,6 +36,7 @@ The project paves the way for further research into the development of more adva
 
 
 ## 🥇 Contributors
+
 <a href="https://github.com/jamnicki/mig-ai/graphs/contributors">
    <img src="https://contrib.rocks/image?repo=jamnicki/mig-ai"/>
 </a>
