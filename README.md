@@ -1,4 +1,4 @@
-# MigAI - the Sign Language Translation
+# MigAI - Sign Language Translation
 > https://migai-pnw-site.streamlit.app/
 
 <div align="center">
