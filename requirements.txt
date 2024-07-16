@@ -4,6 +4,9 @@ python-dotenv
 pandas[all]
 jsonlines
 wandb
+mediapipe
+opencv-python
+
 
 notebook
 nbconvert

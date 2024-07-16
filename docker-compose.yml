@@ -11,11 +11,11 @@ services:
       - ~/.python_history:/root/.python_history
     container_name: mig-ai
     tty: true
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]
 
   wandb:
     image: wandb/local

@@ -12,7 +12,10 @@ RUN apt-get install --no-install-recommends -y bash \
     wget \
     ca-certificates \
     gcc \
-    libpq-dev
+    libpq-dev \
+    ffmpeg \
+    libxext6\
+    libsm6
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
