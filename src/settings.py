@@ -9,6 +9,8 @@ def get_project_root() -> Path:
 
 ROOT = get_project_root()
 DATA_DIR = ROOT / "data"
+MODELS_DIR = ROOT / "models"
+PLOTS_DIR = ROOT / "plots"
 
 ORKPJM_DIR = DATA_DIR / "ORKPJM"
 ORKPJM_VIDEOS_DIR = ORKPJM_DIR / "filmy_korpus"

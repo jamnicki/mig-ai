@@ -2,4 +2,4 @@
     remote = myremote
     autostage = true
 ['remote "myremote"']
-    url = https://migaiaccname.blob.core.windows.net/datacontainer
+    url = gdrive://1TgqbLMPX2ANaABCugT2lbnJjDzjH-rsx
