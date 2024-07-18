@@ -35,13 +35,6 @@ For each of the tested architectures, the parameter configuration that achieved 
 The project paves the way for further research into the development of more advanced and accurate translation tools that can make a significant difference in the lives of the deaf community.
 
 
-## 🥇 Contributors
-
-<a href="https://github.com/jamnicki/mig-ai/graphs/contributors">
-   <img src="https://contrib.rocks/image?repo=jamnicki/mig-ai"/>
-</a>
-
-
 ## Patrons
 ![partners](https://github.com/user-attachments/assets/a0d181b0-acab-4c30-95f9-26874c5e43e8)
 
